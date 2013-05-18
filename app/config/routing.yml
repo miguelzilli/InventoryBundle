@@ -1,0 +1,5 @@
+mz_inventory:
+    resource: "@mzInventoryBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
