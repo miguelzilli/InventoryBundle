@@ -12,6 +12,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Table(name="items")
  * @ORM\Entity
  * @UniqueEntity(fields="inventoryCode")
+ * ORM\HasLifeCycleCallbacks()
  */
 class Item
 {
@@ -131,6 +132,16 @@ class Item
      * })
      */
     private $category;
+
+    /**
+     * @var \mz\InventoryBundle\Entity\Condition
+     *
+     * @ORM\ManyToOne(targetEntity="mz\InventoryBundle\Entity\Condition", inversedBy="items")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="condition_id", referencedColumnName="id", nullable=false)
+     * })
+     */
+    private $condition;
 
     /**
      * @var \mz\InventoryBundle\Entity\Location
@@ -497,6 +508,29 @@ class Item
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * Set condition
+     *
+     * @param \mz\InventoryBundle\Entity\Condition $condition
+     * @return Item
+     */
+    public function setCondition(\mz\InventoryBundle\Entity\Condition $condition)
+    {
+        $this->condition = $condition;
+
+        return $this;
+    }
+
+    /**
+     * Get condition
+     *
+     * @return \mz\InventoryBundle\Entity\Condition 
+     */
+    public function getCondition()
+    {
+        return $this->condition;
     }
 
     /**

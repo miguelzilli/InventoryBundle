@@ -41,7 +41,6 @@ class Image
      */
     private $item;
 
-
     /**
      * Get id
      *
