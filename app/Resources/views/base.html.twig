@@ -1,13 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="{{ asset('bundles/mzinventory/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('bundles/mzinventory/css/bootstrap-responsive.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('bundles/mzinventory/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+        <!--[if IE 7]>
+            <link href="{{ asset('bundles/mzinventory/css/font-awesome-ie7.min.css') }}" rel="stylesheet" type="text/css">
+        <![endif]-->
+        <link href="{{ asset('bundles/mzinventory/css/theme.css') }}" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            #line-chart{height:300px;width:800px;margin:0 auto;margin-top:1em}
+            .brand{font-family:georgia,serif}
+            .brand .first{color:#ccc;font-style:italic}
+            .brand .second{color:#fff;font-weight:bold}
+        </style>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="{{ asset('bundles/mzinventory/favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('bundles/mzinventory/favicon.ico') }}" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('bundles/mzinventory/apple-touch-icon-144.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('bundles/mzinventory/apple-touch-icon-114.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('bundles/mzinventory/apple-touch-icon-72.png') }}">
+        <link rel="apple-touch-icon-precomposed" href="{{ asset('bundles/mzinventory/apple-touch-icon-57.png') }}">
     </head>
-    <body>
-        {% block body %}{% endblock %}
+
+    <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+    <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+    <!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+    <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--> 
+    <body class=""> 
+        <!--<![endif]-->
+        <div class="navbar">
+            <div class="navbar-inner">
+
+                {% block user_menu %}{% endblock %}
+
+                <a class="brand" href="index.html">
+                    <span class="first">Your</span>
+                    <span class="second">Company</span>
+                </a>
+                
+            </div>
+        </div>
+
+        {% block body %}[BODY CONTENT HERE]{% endblock %}
+
+        <script src="{{ asset('bundles/mzinventory/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('bundles/mzinventory/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript">
+            $("[rel=tooltip]").tooltip();
+            $(function() {
+                $('.demo-cancel-click').click(function() {
+                    return false;
+                });
+            });
+        </script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
