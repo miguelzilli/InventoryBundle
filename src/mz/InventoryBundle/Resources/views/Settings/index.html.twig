@@ -1,0 +1,42 @@
+{% extends 'mzInventoryBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Settings
+{% endblock %}
+
+{% block page_title %} Settings {% endblock %}
+
+{% block content %}
+    <div class="row-fluid">
+        <div class="block span6">
+            <a data-toggle="collapse" class="block-heading" href="#widget-categories">Categories</a>
+            <div class="block-body in collapse" id="widget-categories" style="height: auto;">
+                {{ include('mzInventoryBundle:Settings:_table.html.twig', {'entities': categories}) }}
+            </div>
+        </div>
+
+        <div class="block span6">
+            <a data-toggle="collapse" class="block-heading" href="#widget-conditions">Conditions</a>
+            <div class="block-body in collapse" id="widget-conditions" style="height: auto;">
+                {{ include('mzInventoryBundle:Settings:_table2.html.twig', {'entities': conditions}) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="block span6">
+            <a data-toggle="collapse" class="block-heading" href="#widget-locations">Locations</a>
+            <div class="block-body in collapse" id="widget-locations" style="height: auto;">
+                {{ include('mzInventoryBundle:Settings:_table.html.twig', {'entities': locations}) }}
+            </div>
+        </div>
+
+        <div class="block span6">
+            <a data-toggle="collapse" class="block-heading" href="#widget-statuses">Statuses</a>
+            <div class="block-body in collapse" id="widget-statuses" style="height: auto;">
+                {{ include('mzInventoryBundle:Settings:_table2.html.twig', {'entities': statuses}) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

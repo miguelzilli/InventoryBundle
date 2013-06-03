@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "fd6f42de2857089df42c82ec5b0a3744",
+    "hash": "b29eea2e2b758fdb776beee2b57735f7",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1287,6 +1287,101 @@
             "time": "2012-12-21 11:40:51"
         },
         {
+            "name": "raulfraile/ladybug",
+            "version": "v0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/Ladybug.git",
+                "reference": "v0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/Ladybug/zipball/v0.6",
+                "reference": "v0.6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/serializer": ">=2.0.4",
+                "symfony/yaml": ">=2.0.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ladybug": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raul Fraile",
+                    "email": "raulfraile@gmail.com",
+                    "homepage": "http://www.raulfrailebeneyto.com/"
+                }
+            ],
+            "description": "Simple and Extensible PHP Dumper",
+            "homepage": "https://github.com/raulfraile/Ladybug",
+            "keywords": [
+                "dump",
+                "ladybug",
+                "tree"
+            ],
+            "time": "2013-01-31 14:38:18"
+        },
+        {
+            "name": "raulfraile/ladybug-bundle",
+            "version": "dev-master",
+            "target-dir": "RaulFraile/Bundle/LadybugBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/LadybugBundle.git",
+                "reference": "v0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/LadybugBundle/zipball/v0.6",
+                "reference": "v0.6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "raulfraile/ladybug": ">=0.5",
+                "symfony/framework-bundle": ">=2.0.0"
+            },
+            "replace": {
+                "raulfraile/ladybugbundle": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "RaulFraile\\Bundle\\LadybugBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raul Fraile",
+                    "email": "raulfraile@gmail.com",
+                    "homepage": "http://www.raulfrailebeneyto.com/"
+                }
+            ],
+            "description": "Symfony2 bundle for Ladybug library (Simple and Extensible PHP Dumper)",
+            "homepage": "https://github.com/raulfraile/LadybugBundle",
+            "keywords": [
+                "dump",
+                "ladybug",
+                "tree",
+                "twig"
+            ],
+            "time": "2013-05-12 08:36:41"
+        },
+        {
             "name": "sensio/distribution-bundle",
             "version": "v2.2.1",
             "target-dir": "Sensio/Bundle/DistributionBundle",
@@ -1856,7 +1951,8 @@
     ],
     "minimum-stability": "alpha",
     "stability-flags": {
-        "doctrine/doctrine-fixtures-bundle": 20
+        "doctrine/doctrine-fixtures-bundle": 20,
+        "raulfraile/ladybug-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

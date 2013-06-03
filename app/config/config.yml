@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: "@mzInventoryBundle/Resources/config/services.yml" }
 
 framework:
     #esi:             ~
@@ -63,3 +64,11 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+parameters:
+    display:
+        label-success: Success
+        label-warning: Warning
+        label-important: Important
+        label-info: Info
+        label-inverse: Inverse

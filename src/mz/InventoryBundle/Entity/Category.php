@@ -112,4 +112,8 @@ class Category
     {
         return $this->items;
     }
+
+    public function getClassName(){
+        return 'Category';
+    }
 }

@@ -1,5 +1,3 @@
 mz_inventory:
-    resource: "@mzInventoryBundle/Controller/"
-    type:     annotation
+    resource: "@mzInventoryBundle/Resources/config/routing.yml"
     prefix:   /
-

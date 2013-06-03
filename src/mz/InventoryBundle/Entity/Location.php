@@ -112,4 +112,8 @@ class Location
     {
         return $this->items;
     }
+
+    public function getClassName(){
+        return 'Location';
+    }
 }

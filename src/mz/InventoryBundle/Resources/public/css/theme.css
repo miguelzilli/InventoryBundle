@@ -752,3 +752,8 @@ table.table.list tr:first-child td {
     font-size: .5em;
   }
 }
+/** Modified by Mz **/
+th.actions{
+  width: 30px;
+}
+

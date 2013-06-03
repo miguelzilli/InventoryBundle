@@ -1,0 +1,31 @@
+settings_show:
+    path:  /{id}/show
+    defaults: { _controller: "mzInventoryBundle:Settings:show" }
+
+settings_new:
+    path:  /new
+    defaults: { _controller: "mzInventoryBundle:Settings:new" }
+
+settings_create:
+    path:  /create
+    defaults: { _controller: "mzInventoryBundle:Settings:create" }
+    requirements: { _method: post }
+
+settings_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "mzInventoryBundle:Settings:edit" }
+
+settings_update:
+    path:  /{id}/update
+    defaults: { _controller: "mzInventoryBundle:Settings:update" }
+    requirements: { _method: post }
+
+settings_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "mzInventoryBundle:Settings:delete" }
+    requirements: { _method: post }
+
+settings_get_delete_form:
+    path:  /{id}/get_delete_form
+    defaults: { _controller: "mzInventoryBundle:Settings:getDeleteForm" }
+    requirements: { _method: get }

@@ -1,0 +1,21 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th class="actions"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.name }}</td>
+                <td>
+                  <a href="{{ path('settings_edit', { 'className': entity.className|lower, 'id': entity.id }) }}"><i class="icon-pencil"></i></a>
+                  <a data-toggle="modal" role="button" href="#ConfirmDeletion"><i class="icon-remove"></i></a>
+              </td>
+          </tr>
+        {% endfor %}
+    </tbody>
+</table>

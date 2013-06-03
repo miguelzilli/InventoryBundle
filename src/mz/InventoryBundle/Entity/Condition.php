@@ -36,6 +36,7 @@ class Condition
      * @var string
      *
      * @ORM\Column(name="display", type="string", length=255)
+     * @Assert\NotNull()
      */
     private $display;
 
@@ -141,5 +142,9 @@ class Condition
     public function getItems()
     {
         return $this->items;
+    }
+
+    public function getClassName(){
+        return 'Condition';
     }
 }

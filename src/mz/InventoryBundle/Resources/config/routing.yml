@@ -1,0 +1,12 @@
+settings_index:
+    path:  /settings
+    defaults: { _controller: "mzInventoryBundle:Settings:index" }
+
+mz_settings_routes:
+    prefix: /settings/{className}
+    resource: "@mzInventoryBundle/Resources/config/routing/settings.yml"
+    requirements:
+        className: category|condition|location|status
+
+mz_homepage:
+    path: /
